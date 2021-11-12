@@ -1,0 +1,18 @@
+{
+  "name": "feedly-newtab",
+  "version": "0.0.1",
+  "description": "Chrome new tab that has the latest feedly curated streams",
+  "main": "index.ts",
+  "author": "neutralboy",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "swc ./src/index.ts -o ./lib/index.js --env-name='debug' -w --log-watch-compilation & http-server -p 8000 --no-dotfiles -o /lib/ -s"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.1.51",
+    "@swc/core": "^1.2.108",
+    "chokidar": "^3.5.2",
+    "http-server": "^14.0.0"
+  }
+}
