@@ -7,10 +7,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "dev": "inotifywait -r src -e modify | spack & http-server -p 8000 --no-dotfiles -o /lib/ -s",
-    "swrc-builder": "swc ./src/index.tsx -o ./lib/index.js --env-name='debug' -w --log-watch-compilation & ",
-    "dev2": "chokidar \"**/*.tsx\" -c spack & http-server -p 8000 --no-dotfiles -o /lib/ -s",
-    "dev3": "sane 'spack' 'src' --glob='**/*.tsx' & http-server -p 8000 --no-dotfiles -o /lib/ -s"
+    "dev": "sane 'spack' 'src' --glob='**/*.tsx' & http-server -p 8000 --no-dotfiles -o /lib/ -s"
   },
   "devDependencies": {
     "@swc/cli": "^0.1.51",
